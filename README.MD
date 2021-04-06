@@ -1,7 +1,5 @@
 # Real-time Scene Text Detection with Differentiable Binarization
 
-**test
-
 **note**: some code is inherited from [MhLiao/DB](https://github.com/MhLiao/DB)
 
 [中文解读](https://zhuanlan.zhihu.com/p/94677957)

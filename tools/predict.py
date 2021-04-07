@@ -140,8 +140,10 @@ if __name__ == '__main__':
     model = Pytorch_model(args.model_path, post_p_thre=args.thre, gpu_id=0)
     img_folder = pathlib.Path(args.input_folder)
     for img_path in tqdm(get_file_list(args.input_folder, p_postfix=['.jpg'])):
+        # gt = []
         preds, boxes_list, score_list, t = model.predict(img_path, is_output_polygon=args.polygon)
-        img = draw_bbox(cv2.imread(img_path)[:, :, ::-1], boxes_list)
+        img = draw_bbox(cv2.imread(img_path)[:, :, ::-1], boxes_list, (0, 255, 0))
+        # img = draw_bbox(img, gt, (0, 255, 0))
         if args.show:
             show_img(preds)
             show_img(img, title=os.path.basename(img_path))

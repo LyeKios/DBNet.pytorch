@@ -5,7 +5,7 @@ dataset:
       type: ICDAR2015Dataset # 数据集类型
       args:
         data_path: # 一个存放 img_path \t gt_path的文件
-          - ''
+          - '/home/seemmo/projects/Kios/DBNet.pytorch/datasets/train.txt'
         pre_processes: # 数据的预处理过程，包含augment和标签制作
           - type: IaaAugment # 使用imgaug进行变换
             args:
